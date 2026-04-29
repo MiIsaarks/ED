@@ -59,14 +59,10 @@ void ajustardown(int *heap, int x){
     if(fe != -1){
         maior = fe;
         if(fd != -1){
-            if(fd > fe){
-                maior = fd;
-            }
-        }
+
     if(heap[fd] > heap[fe]){
         maior =fd;
-    }else{
-        maior = fe;
+    }
     }
         if(heap[maior] > heap[x]){
         int aux = heap[x];
@@ -100,7 +96,8 @@ int main(){
         printf("\nO que deseja fazer? ");
         printf("\n1 - Inserir um elemento na heap");
         printf("\n2 - Remover um elemento da heap");
-        printf("\n3 - Imprimir o heap\n");
+        printf("\n3 - Imprimir o heap");
+        printf("\n4 - Sair\n");
         scanf("%d", &x);
 
         if(x == 1){
