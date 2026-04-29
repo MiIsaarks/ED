@@ -123,18 +123,11 @@ int heightN(TreeNode *a){
     if(a == NULL){
         return 0;
     }else{
-        int he = heightN(a->left);
-        int hd = heightN(a->right);
-      
-            if(he >= hd && a->cor == 'p'){
-                return he + 1;
-            }else if(he <= hd && a->cor == 'p'){
-                return hd + 1;
-            }else  if(he >= hd){
-                return he;
-            }else{
-                return hd;
-            }
+       if(a->cor == 'p'){
+        return 1 + heightN(a->left);
+       }else{
+        return heightN(a->left);
+       }
         }
     }
 
